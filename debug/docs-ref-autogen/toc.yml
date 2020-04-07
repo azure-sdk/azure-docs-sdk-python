@@ -1,158 +1,250 @@
 - items:
   - items:
     - items:
-      - name: azure.storage.blob.aio.BlobClient
-        uid: azure.storage.blob.aio.BlobClient
-      - name: azure.storage.blob.aio.BlobLeaseClient
-        uid: azure.storage.blob.aio.BlobLeaseClient
-      - name: azure.storage.blob.aio.BlobServiceClient
-        uid: azure.storage.blob.aio.BlobServiceClient
-      - name: azure.storage.blob.aio.ContainerClient
-        uid: azure.storage.blob.aio.ContainerClient
-      - name: azure.storage.blob.aio.ExponentialRetry
-        uid: azure.storage.blob.aio.ExponentialRetry
-      - name: azure.storage.blob.aio.LinearRetry
-        uid: azure.storage.blob.aio.LinearRetry
-      - name: azure.storage.blob.aio.StorageStreamDownloader
-        uid: azure.storage.blob.aio.StorageStreamDownloader
-      name: azure.storage.blob.aio
-      uid: azure.storage.blob.aio
-    - name: azure.storage.blob.AccessPolicy
-      uid: azure.storage.blob.AccessPolicy
-    - name: azure.storage.blob.AccountSasPermissions
-      uid: azure.storage.blob.AccountSasPermissions
-    - name: azure.storage.blob.BlobAnalyticsLogging
-      uid: azure.storage.blob.BlobAnalyticsLogging
-    - name: azure.storage.blob.BlobBlock
-      uid: azure.storage.blob.BlobBlock
-    - name: azure.storage.blob.BlobClient
-      uid: azure.storage.blob.BlobClient
-    - name: azure.storage.blob.BlobLeaseClient
-      uid: azure.storage.blob.BlobLeaseClient
-    - name: azure.storage.blob.BlobProperties
-      uid: azure.storage.blob.BlobProperties
-    - name: azure.storage.blob.BlobSasPermissions
-      uid: azure.storage.blob.BlobSasPermissions
-    - name: azure.storage.blob.BlobServiceClient
-      uid: azure.storage.blob.BlobServiceClient
-    - name: azure.storage.blob.BlobType
-      uid: azure.storage.blob.BlobType
-    - name: azure.storage.blob.BlockState
-      uid: azure.storage.blob.BlockState
-    - name: azure.storage.blob.ContainerClient
-      uid: azure.storage.blob.ContainerClient
-    - name: azure.storage.blob.ContainerProperties
-      uid: azure.storage.blob.ContainerProperties
-    - name: azure.storage.blob.ContainerSasPermissions
-      uid: azure.storage.blob.ContainerSasPermissions
-    - name: azure.storage.blob.ContentSettings
-      uid: azure.storage.blob.ContentSettings
-    - name: azure.storage.blob.CopyProperties
-      uid: azure.storage.blob.CopyProperties
-    - name: azure.storage.blob.CorsRule
-      uid: azure.storage.blob.CorsRule
-    - name: azure.storage.blob.CustomerProvidedEncryptionKey
-      uid: azure.storage.blob.CustomerProvidedEncryptionKey
-    - name: azure.storage.blob.ExponentialRetry
-      uid: azure.storage.blob.ExponentialRetry
-    - name: azure.storage.blob.LeaseProperties
-      uid: azure.storage.blob.LeaseProperties
-    - name: azure.storage.blob.LinearRetry
-      uid: azure.storage.blob.LinearRetry
-    - name: azure.storage.blob.LocationMode
-      uid: azure.storage.blob.LocationMode
-    - name: azure.storage.blob.Metrics
-      uid: azure.storage.blob.Metrics
-    - name: azure.storage.blob.PageRange
-      uid: azure.storage.blob.PageRange
-    - name: azure.storage.blob.PartialBatchErrorException
-      uid: azure.storage.blob.PartialBatchErrorException
-    - name: azure.storage.blob.PremiumPageBlobTier
-      uid: azure.storage.blob.PremiumPageBlobTier
-    - name: azure.storage.blob.PublicAccess
-      uid: azure.storage.blob.PublicAccess
-    - name: azure.storage.blob.RehydratePriority
-      uid: azure.storage.blob.RehydratePriority
-    - name: azure.storage.blob.ResourceTypes
-      uid: azure.storage.blob.ResourceTypes
-    - name: azure.storage.blob.RetentionPolicy
-      uid: azure.storage.blob.RetentionPolicy
-    - name: azure.storage.blob.SequenceNumberAction
-      uid: azure.storage.blob.SequenceNumberAction
-    - name: azure.storage.blob.StandardBlobTier
-      uid: azure.storage.blob.StandardBlobTier
-    - name: azure.storage.blob.StaticWebsite
-      uid: azure.storage.blob.StaticWebsite
-    - name: azure.storage.blob.StorageErrorCode
-      uid: azure.storage.blob.StorageErrorCode
-    - name: azure.storage.blob.StorageStreamDownloader
-      uid: azure.storage.blob.StorageStreamDownloader
-    - name: azure.storage.blob.UserDelegationKey
-      uid: azure.storage.blob.UserDelegationKey
-    name: azure.storage.blob
-    uid: azure.storage.blob
-  name: azure-storage-blob
-  uid: project-azure-storage-blob
+      - name: azure.core.async_paging.AsyncItemPaged
+        uid: azure.core.async_paging.AsyncItemPaged
+      - name: azure.core.async_paging.AsyncPageIterator
+        uid: azure.core.async_paging.AsyncPageIterator
+      name: azure.core.async_paging
+      uid: azure.core.async_paging
+    - items:
+      - name: azure.core.configuration.Configuration
+        uid: azure.core.configuration.Configuration
+      - name: azure.core.configuration.ConnectionConfiguration
+        uid: azure.core.configuration.ConnectionConfiguration
+      name: azure.core.configuration
+      uid: azure.core.configuration
+    - items:
+      - name: azure.core.credentials.AccessToken
+        uid: azure.core.credentials.AccessToken
+      - name: azure.core.credentials.AzureKeyCredential
+        uid: azure.core.credentials.AzureKeyCredential
+      name: azure.core.credentials
+      uid: azure.core.credentials
+    - name: azure.core.credentials_async
+      uid: azure.core.credentials_async
+    - items:
+      - name: azure.core.exceptions.AzureError
+        uid: azure.core.exceptions.AzureError
+      - name: azure.core.exceptions.ClientAuthenticationError
+        uid: azure.core.exceptions.ClientAuthenticationError
+      - name: azure.core.exceptions.DecodeError
+        uid: azure.core.exceptions.DecodeError
+      - name: azure.core.exceptions.HttpResponseError
+        uid: azure.core.exceptions.HttpResponseError
+      - name: azure.core.exceptions.ODataV4Error
+        uid: azure.core.exceptions.ODataV4Error
+      - name: azure.core.exceptions.ODataV4Format
+        uid: azure.core.exceptions.ODataV4Format
+      - name: azure.core.exceptions.ResourceExistsError
+        uid: azure.core.exceptions.ResourceExistsError
+      - name: azure.core.exceptions.ResourceModifiedError
+        uid: azure.core.exceptions.ResourceModifiedError
+      - name: azure.core.exceptions.ResourceNotFoundError
+        uid: azure.core.exceptions.ResourceNotFoundError
+      - name: azure.core.exceptions.ResourceNotModifiedError
+        uid: azure.core.exceptions.ResourceNotModifiedError
+      - name: azure.core.exceptions.ServiceRequestError
+        uid: azure.core.exceptions.ServiceRequestError
+      - name: azure.core.exceptions.ServiceResponseError
+        uid: azure.core.exceptions.ServiceResponseError
+      - name: azure.core.exceptions.TooManyRedirectsError
+        uid: azure.core.exceptions.TooManyRedirectsError
+      name: azure.core.exceptions
+      uid: azure.core.exceptions
+    - items:
+      - name: azure.core.paging.ItemPaged
+        uid: azure.core.paging.ItemPaged
+      - name: azure.core.paging.PageIterator
+        uid: azure.core.paging.PageIterator
+      name: azure.core.paging
+      uid: azure.core.paging
+    - items:
+      - items:
+        - name: azure.core.pipeline.policies.AsyncBearerTokenCredentialPolicy
+          uid: azure.core.pipeline.policies.AsyncBearerTokenCredentialPolicy
+        - name: azure.core.pipeline.policies.AsyncHTTPPolicy
+          uid: azure.core.pipeline.policies.AsyncHTTPPolicy
+        - name: azure.core.pipeline.policies.AsyncRedirectPolicy
+          uid: azure.core.pipeline.policies.AsyncRedirectPolicy
+        - name: azure.core.pipeline.policies.AsyncRetryPolicy
+          uid: azure.core.pipeline.policies.AsyncRetryPolicy
+        - name: azure.core.pipeline.policies.AzureKeyCredentialPolicy
+          uid: azure.core.pipeline.policies.AzureKeyCredentialPolicy
+        - name: azure.core.pipeline.policies.BearerTokenCredentialPolicy
+          uid: azure.core.pipeline.policies.BearerTokenCredentialPolicy
+        - name: azure.core.pipeline.policies.ContentDecodePolicy
+          uid: azure.core.pipeline.policies.ContentDecodePolicy
+        - name: azure.core.pipeline.policies.CustomHookPolicy
+          uid: azure.core.pipeline.policies.CustomHookPolicy
+        - name: azure.core.pipeline.policies.DistributedTracingPolicy
+          uid: azure.core.pipeline.policies.DistributedTracingPolicy
+        - name: azure.core.pipeline.policies.HTTPPolicy
+          uid: azure.core.pipeline.policies.HTTPPolicy
+        - name: azure.core.pipeline.policies.HeadersPolicy
+          uid: azure.core.pipeline.policies.HeadersPolicy
+        - name: azure.core.pipeline.policies.HttpLoggingPolicy
+          uid: azure.core.pipeline.policies.HttpLoggingPolicy
+        - name: azure.core.pipeline.policies.NetworkTraceLoggingPolicy
+          uid: azure.core.pipeline.policies.NetworkTraceLoggingPolicy
+        - name: azure.core.pipeline.policies.ProxyPolicy
+          uid: azure.core.pipeline.policies.ProxyPolicy
+        - name: azure.core.pipeline.policies.RedirectPolicy
+          uid: azure.core.pipeline.policies.RedirectPolicy
+        - name: azure.core.pipeline.policies.RequestHistory
+          uid: azure.core.pipeline.policies.RequestHistory
+        - name: azure.core.pipeline.policies.RequestIdPolicy
+          uid: azure.core.pipeline.policies.RequestIdPolicy
+        - name: azure.core.pipeline.policies.RetryMode
+          uid: azure.core.pipeline.policies.RetryMode
+        - name: azure.core.pipeline.policies.RetryPolicy
+          uid: azure.core.pipeline.policies.RetryPolicy
+        - name: azure.core.pipeline.policies.SansIOHTTPPolicy
+          uid: azure.core.pipeline.policies.SansIOHTTPPolicy
+        - name: azure.core.pipeline.policies.UserAgentPolicy
+          uid: azure.core.pipeline.policies.UserAgentPolicy
+        name: azure.core.pipeline.policies
+        uid: azure.core.pipeline.policies
+      - items:
+        - name: azure.core.pipeline.transport.AioHttpTransport
+          uid: azure.core.pipeline.transport.AioHttpTransport
+        - name: azure.core.pipeline.transport.AioHttpTransportResponse
+          uid: azure.core.pipeline.transport.AioHttpTransportResponse
+        - name: azure.core.pipeline.transport.AsyncHttpResponse
+          uid: azure.core.pipeline.transport.AsyncHttpResponse
+        - name: azure.core.pipeline.transport.AsyncHttpTransport
+          uid: azure.core.pipeline.transport.AsyncHttpTransport
+        - name: azure.core.pipeline.transport.AsyncioRequestsTransport
+          uid: azure.core.pipeline.transport.AsyncioRequestsTransport
+        - name: azure.core.pipeline.transport.AsyncioRequestsTransportResponse
+          uid: azure.core.pipeline.transport.AsyncioRequestsTransportResponse
+        - name: azure.core.pipeline.transport.HttpRequest
+          uid: azure.core.pipeline.transport.HttpRequest
+        - name: azure.core.pipeline.transport.HttpResponse
+          uid: azure.core.pipeline.transport.HttpResponse
+        - name: azure.core.pipeline.transport.HttpTransport
+          uid: azure.core.pipeline.transport.HttpTransport
+        - name: azure.core.pipeline.transport.RequestsTransport
+          uid: azure.core.pipeline.transport.RequestsTransport
+        - name: azure.core.pipeline.transport.RequestsTransportResponse
+          uid: azure.core.pipeline.transport.RequestsTransportResponse
+        name: azure.core.pipeline.transport
+        uid: azure.core.pipeline.transport
+      - name: azure.core.pipeline.AsyncPipeline
+        uid: azure.core.pipeline.AsyncPipeline
+      - name: azure.core.pipeline.Pipeline
+        uid: azure.core.pipeline.Pipeline
+      - name: azure.core.pipeline.PipelineContext
+        uid: azure.core.pipeline.PipelineContext
+      - name: azure.core.pipeline.PipelineRequest
+        uid: azure.core.pipeline.PipelineRequest
+      - name: azure.core.pipeline.PipelineResponse
+        uid: azure.core.pipeline.PipelineResponse
+      name: azure.core.pipeline
+      uid: azure.core.pipeline
+    - items:
+      - items:
+        - name: azure.core.polling.async_base_polling.AsyncLROBasePolling
+          uid: azure.core.polling.async_base_polling.AsyncLROBasePolling
+        name: azure.core.polling.async_base_polling
+        uid: azure.core.polling.async_base_polling
+      - items:
+        - name: azure.core.polling.base_polling.BadResponse
+          uid: azure.core.polling.base_polling.BadResponse
+        - name: azure.core.polling.base_polling.BadStatus
+          uid: azure.core.polling.base_polling.BadStatus
+        - name: azure.core.polling.base_polling.LROBasePolling
+          uid: azure.core.polling.base_polling.LROBasePolling
+        - name: azure.core.polling.base_polling.LocationPolling
+          uid: azure.core.polling.base_polling.LocationPolling
+        - name: azure.core.polling.base_polling.LongRunningOperation
+          uid: azure.core.polling.base_polling.LongRunningOperation
+        - name: azure.core.polling.base_polling.OperationFailed
+          uid: azure.core.polling.base_polling.OperationFailed
+        - name: azure.core.polling.base_polling.OperationResourcePolling
+          uid: azure.core.polling.base_polling.OperationResourcePolling
+        - name: azure.core.polling.base_polling.StatusCheckPolling
+          uid: azure.core.polling.base_polling.StatusCheckPolling
+        name: azure.core.polling.base_polling
+        uid: azure.core.polling.base_polling
+      - name: azure.core.polling.AsyncNoPolling
+        uid: azure.core.polling.AsyncNoPolling
+      - name: azure.core.polling.AsyncPollingMethod
+        uid: azure.core.polling.AsyncPollingMethod
+      - name: azure.core.polling.LROPoller
+        uid: azure.core.polling.LROPoller
+      - name: azure.core.polling.NoPolling
+        uid: azure.core.polling.NoPolling
+      - name: azure.core.polling.PollingMethod
+        uid: azure.core.polling.PollingMethod
+      name: azure.core.polling
+      uid: azure.core.polling
+    - items:
+      - name: azure.core.settings.Settings
+        uid: azure.core.settings.Settings
+      name: azure.core.settings
+      uid: azure.core.settings
+    - items:
+      - name: azure.core.tracing.common
+        uid: azure.core.tracing.common
+      - name: azure.core.tracing.decorator
+        uid: azure.core.tracing.decorator
+      - name: azure.core.tracing.decorator_async
+        uid: azure.core.tracing.decorator_async
+      - name: azure.core.tracing.AbstractSpan
+        uid: azure.core.tracing.AbstractSpan
+      - name: azure.core.tracing.HttpSpanMixin
+        uid: azure.core.tracing.HttpSpanMixin
+      - name: azure.core.tracing.SpanKind
+        uid: azure.core.tracing.SpanKind
+      name: azure.core.tracing
+      uid: azure.core.tracing
+    - name: azure.core.AsyncPipelineClient
+      uid: azure.core.AsyncPipelineClient
+    - name: azure.core.MatchConditions
+      uid: azure.core.MatchConditions
+    - name: azure.core.PipelineClient
+      uid: azure.core.PipelineClient
+    name: azure.core
+    uid: azure.core
+  name: azure-core
+  uid: project-azure-core
 
 - items:
   - items:
-    - items:
-      - items:
-        - name: azure.eventhub.aio.CheckpointStore
-          uid: azure.eventhub.aio.CheckpointStore
-        - name: azure.eventhub.aio.EventHubConsumerClient
-          uid: azure.eventhub.aio.EventHubConsumerClient
-        - name: azure.eventhub.aio.EventHubProducerClient
-          uid: azure.eventhub.aio.EventHubProducerClient
-        - name: azure.eventhub.aio.EventHubSharedKeyCredential
-          uid: azure.eventhub.aio.EventHubSharedKeyCredential
-        - name: azure.eventhub.aio.PartitionContext
-          uid: azure.eventhub.aio.PartitionContext
-        name: azure.eventhub.aio
-        uid: azure.eventhub.aio
-      - items:
-        - name: azure.eventhub.exceptions.AuthenticationError
-          uid: azure.eventhub.exceptions.AuthenticationError
-        - name: azure.eventhub.exceptions.ClientClosedError
-          uid: azure.eventhub.exceptions.ClientClosedError
-        - name: azure.eventhub.exceptions.ConnectError
-          uid: azure.eventhub.exceptions.ConnectError
-        - name: azure.eventhub.exceptions.ConnectionLostError
-          uid: azure.eventhub.exceptions.ConnectionLostError
-        - name: azure.eventhub.exceptions.EventDataError
-          uid: azure.eventhub.exceptions.EventDataError
-        - name: azure.eventhub.exceptions.EventDataSendError
-          uid: azure.eventhub.exceptions.EventDataSendError
-        - name: azure.eventhub.exceptions.EventHubError
-          uid: azure.eventhub.exceptions.EventHubError
-        - name: azure.eventhub.exceptions.OperationTimeoutError
-          uid: azure.eventhub.exceptions.OperationTimeoutError
-        - name: azure.eventhub.exceptions.OwnershipLostError
-          uid: azure.eventhub.exceptions.OwnershipLostError
-        name: azure.eventhub.exceptions
-        uid: azure.eventhub.exceptions
-      - name: azure.eventhub.CheckpointStore
-        uid: azure.eventhub.CheckpointStore
-      - name: azure.eventhub.CloseReason
-        uid: azure.eventhub.CloseReason
-      - name: azure.eventhub.EventData
-        uid: azure.eventhub.EventData
-      - name: azure.eventhub.EventDataBatch
-        uid: azure.eventhub.EventDataBatch
-      - name: azure.eventhub.EventHubConsumerClient
-        uid: azure.eventhub.EventHubConsumerClient
-      - name: azure.eventhub.EventHubProducerClient
-        uid: azure.eventhub.EventHubProducerClient
-      - name: azure.eventhub.EventHubSharedKeyCredential
-        uid: azure.eventhub.EventHubSharedKeyCredential
-      - name: azure.eventhub.PartitionContext
-        uid: azure.eventhub.PartitionContext
-      - name: azure.eventhub.TransportType
-        uid: azure.eventhub.TransportType
-      name: azure.eventhub
-      uid: azure.eventhub
-    name: azure
-    uid: azure
+    - name: azure.eventhub.aio.CheckpointStore
+      uid: azure.eventhub.aio.CheckpointStore
+    - name: azure.eventhub.aio.EventHubConsumerClient
+      uid: azure.eventhub.aio.EventHubConsumerClient
+    - name: azure.eventhub.aio.EventHubProducerClient
+      uid: azure.eventhub.aio.EventHubProducerClient
+    - name: azure.eventhub.aio.EventHubSharedKeyCredential
+      uid: azure.eventhub.aio.EventHubSharedKeyCredential
+    - name: azure.eventhub.aio.PartitionContext
+      uid: azure.eventhub.aio.PartitionContext
+    name: azure.eventhub.aio
+    uid: azure.eventhub.aio
+  - items:
+    - name: azure.eventhub.exceptions.AuthenticationError
+      uid: azure.eventhub.exceptions.AuthenticationError
+    - name: azure.eventhub.exceptions.ClientClosedError
+      uid: azure.eventhub.exceptions.ClientClosedError
+    - name: azure.eventhub.exceptions.ConnectError
+      uid: azure.eventhub.exceptions.ConnectError
+    - name: azure.eventhub.exceptions.ConnectionLostError
+      uid: azure.eventhub.exceptions.ConnectionLostError
+    - name: azure.eventhub.exceptions.EventDataError
+      uid: azure.eventhub.exceptions.EventDataError
+    - name: azure.eventhub.exceptions.EventDataSendError
+      uid: azure.eventhub.exceptions.EventDataSendError
+    - name: azure.eventhub.exceptions.EventHubError
+      uid: azure.eventhub.exceptions.EventHubError
+    - name: azure.eventhub.exceptions.OperationTimeoutError
+      uid: azure.eventhub.exceptions.OperationTimeoutError
+    - name: azure.eventhub.exceptions.OwnershipLostError
+      uid: azure.eventhub.exceptions.OwnershipLostError
+    name: azure.eventhub.exceptions
+    uid: azure.eventhub.exceptions
   name: azure-eventhub
   uid: project-azure-eventhub
 

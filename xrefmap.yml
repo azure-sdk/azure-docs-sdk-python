@@ -931,10 +931,6 @@ references:
   href: https://docs.python.org/3/library/wave.html#wave.Error
   name: Error
   uid: wave.Error
-- fullName: weakref.ReferenceError
-  href: https://docs.python.org/3/library/weakref.html#weakref.ReferenceError
-  name: ReferenceError
-  uid: weakref.ReferenceError
 - fullName: webbrowser.Error
   href: https://docs.python.org/3/library/webbrowser.html#webbrowser.Error
   name: Error
@@ -17607,6 +17603,10 @@ references:
   href: https://docs.python.org/3/library/dbm.html#dbm.ndbm.library
   name: library
   uid: dbm.ndbm.library
+- fullName: decimal.HAVE_CONTEXTVAR
+  href: https://docs.python.org/3/library/decimal.html#decimal.HAVE_CONTEXTVAR
+  name: HAVE_CONTEXTVAR
+  uid: decimal.HAVE_CONTEXTVAR
 - fullName: decimal.HAVE_THREADS
   href: https://docs.python.org/3/library/decimal.html#decimal.HAVE_THREADS
   name: HAVE_THREADS
@@ -19643,6 +19643,78 @@ references:
   href: https://docs.python.org/3/library/signal.html#signal.NSIG
   name: NSIG
   uid: signal.NSIG
+- fullName: signal.SIGABRT
+  href: https://docs.python.org/3/library/signal.html#signal.SIGABRT
+  name: SIGABRT
+  uid: signal.SIGABRT
+- fullName: signal.SIGALRM
+  href: https://docs.python.org/3/library/signal.html#signal.SIGALRM
+  name: SIGALRM
+  uid: signal.SIGALRM
+- fullName: signal.SIGBREAK
+  href: https://docs.python.org/3/library/signal.html#signal.SIGBREAK
+  name: SIGBREAK
+  uid: signal.SIGBREAK
+- fullName: signal.SIGBUS
+  href: https://docs.python.org/3/library/signal.html#signal.SIGBUS
+  name: SIGBUS
+  uid: signal.SIGBUS
+- fullName: signal.SIGCHLD
+  href: https://docs.python.org/3/library/signal.html#signal.SIGCHLD
+  name: SIGCHLD
+  uid: signal.SIGCHLD
+- fullName: signal.SIGCLD
+  href: https://docs.python.org/3/library/signal.html#signal.SIGCLD
+  name: SIGCLD
+  uid: signal.SIGCLD
+- fullName: signal.SIGCONT
+  href: https://docs.python.org/3/library/signal.html#signal.SIGCONT
+  name: SIGCONT
+  uid: signal.SIGCONT
+- fullName: signal.SIGFPE
+  href: https://docs.python.org/3/library/signal.html#signal.SIGFPE
+  name: SIGFPE
+  uid: signal.SIGFPE
+- fullName: signal.SIGHUP
+  href: https://docs.python.org/3/library/signal.html#signal.SIGHUP
+  name: SIGHUP
+  uid: signal.SIGHUP
+- fullName: signal.SIGILL
+  href: https://docs.python.org/3/library/signal.html#signal.SIGILL
+  name: SIGILL
+  uid: signal.SIGILL
+- fullName: signal.SIGINT
+  href: https://docs.python.org/3/library/signal.html#signal.SIGINT
+  name: SIGINT
+  uid: signal.SIGINT
+- fullName: signal.SIGKILL
+  href: https://docs.python.org/3/library/signal.html#signal.SIGKILL
+  name: SIGKILL
+  uid: signal.SIGKILL
+- fullName: signal.SIGPIPE
+  href: https://docs.python.org/3/library/signal.html#signal.SIGPIPE
+  name: SIGPIPE
+  uid: signal.SIGPIPE
+- fullName: signal.SIGSEGV
+  href: https://docs.python.org/3/library/signal.html#signal.SIGSEGV
+  name: SIGSEGV
+  uid: signal.SIGSEGV
+- fullName: signal.SIGTERM
+  href: https://docs.python.org/3/library/signal.html#signal.SIGTERM
+  name: SIGTERM
+  uid: signal.SIGTERM
+- fullName: signal.SIGUSR1
+  href: https://docs.python.org/3/library/signal.html#signal.SIGUSR1
+  name: SIGUSR1
+  uid: signal.SIGUSR1
+- fullName: signal.SIGUSR2
+  href: https://docs.python.org/3/library/signal.html#signal.SIGUSR2
+  name: SIGUSR2
+  uid: signal.SIGUSR2
+- fullName: signal.SIGWINCH
+  href: https://docs.python.org/3/library/signal.html#signal.SIGWINCH
+  name: SIGWINCH
+  uid: signal.SIGWINCH
 - fullName: signal.SIG_BLOCK
   href: https://docs.python.org/3/library/signal.html#signal.SIG_BLOCK
   name: SIG_BLOCK
