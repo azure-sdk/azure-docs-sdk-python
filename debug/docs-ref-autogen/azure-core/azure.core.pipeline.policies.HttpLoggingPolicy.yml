@@ -60,11 +60,11 @@ items:
   module: azure.core.pipeline.policies
   name: DEFAULT_HEADERS_WHITELIST
   syntax:
-    content: DEFAULT_HEADERS_WHITELIST = {'Pragma', 'If-None-Match', 'ETag', 'If-Modified-Since',
-      'Retry-After', 'x-ms-client-request-id', 'traceparent', 'x-ms-return-client-request-id',
-      'Last-Modified', 'Content-Type', 'If-Unmodified-Since', 'Expires', 'Cache-Control',
-      'Transfer-Encoding', 'Request-Id', 'Server', 'Connection', 'If-Match', 'Date',
-      'Content-Length', 'User-Agent', 'Accept'}
+    content: DEFAULT_HEADERS_WHITELIST = {'Transfer-Encoding', 'If-Modified-Since',
+      'If-Match', 'Request-Id', 'Cache-Control', 'Retry-After', 'Content-Type', 'Content-Length',
+      'Accept', 'Connection', 'traceparent', 'Expires', 'x-ms-return-client-request-id',
+      'Date', 'If-None-Match', 'ETag', 'x-ms-client-request-id', 'If-Unmodified-Since',
+      'Pragma', 'User-Agent', 'Server', 'Last-Modified'}
   type: attribute
   uid: azure.core.pipeline.policies.HttpLoggingPolicy.DEFAULT_HEADERS_WHITELIST
 - class: azure.core.pipeline.policies.HttpLoggingPolicy
