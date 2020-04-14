@@ -6,6 +6,16 @@ items:
   - azure.core.pipeline.transport.RequestsTransport.open
   - azure.core.pipeline.transport.RequestsTransport.send
   class: azure.core.pipeline.transport.RequestsTransport
+  example:
+  - "Synchronous transport with Requests.<!--[!code-python[Main](les\\test_example_sync.py\
+    \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
+    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\1\\\\s\\\\dist_temp\\\
+    \\0\\\\azure-core-1.4.0\\\\samples\\\\test_example_sync.py\", \"xml:space\": \"\
+    preserve\", \"language\": \"python\", \"linenos\": false, \"highlight_args\":\
+    \ {\"linenostart\": 1}} -->\n\n````python\n\n   from azure.core.pipeline.transport\
+    \ import RequestsTransport\n\n   with Pipeline(transport=RequestsTransport(),\
+    \ policies=policies) as pipeline:\n       response = pipeline.run(request)\n\n\
+    \   ````\n"
   fullName: azure.core.pipeline.transport.RequestsTransport
   inheritance:
   - inheritance:

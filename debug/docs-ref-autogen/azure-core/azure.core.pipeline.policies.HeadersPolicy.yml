@@ -6,6 +6,20 @@ items:
   - azure.core.pipeline.policies.HeadersPolicy.headers
   - azure.core.pipeline.policies.HeadersPolicy.on_request
   class: azure.core.pipeline.policies.HeadersPolicy
+  example:
+  - "Configuring a headers policy.<!--[!code-python[Main](les\\test_example_sansio.py\
+    \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
+    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\1\\\\s\\\\dist_temp\\\
+    \\0\\\\azure-core-1.4.0\\\\samples\\\\test_example_sansio.py\", \"xml:space\"\
+    : \"preserve\", \"language\": \"python\", \"linenos\": false, \"highlight_args\"\
+    : {\"linenostart\": 1}} -->\n\n````python\n\n   from azure.core.pipeline.policies\
+    \ import HeadersPolicy\n\n   headers_policy = HeadersPolicy()\n   headers_policy.add_header('CustomValue',\
+    \ 'Foo')\n\n   # Or headers can be added per operation. These headers will supplement\
+    \ existing headers\n   # or those defined in the config headers policy. They will\
+    \ also overwrite existing\n   # identical headers.\n   policies.append(headers_policy)\n\
+    \   client = PipelineClient(base_url=url, policies=policies)\n   request = client.get(url)\n\
+    \   pipeline_response = client._pipeline.run(request, headers={'CustomValue':\
+    \ 'Bar'})\n\n   ````\n"
   fullName: azure.core.pipeline.policies.HeadersPolicy
   inheritance:
   - inheritance:

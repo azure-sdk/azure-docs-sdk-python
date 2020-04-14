@@ -5,6 +5,20 @@ items:
   - azure.core.pipeline.policies.RequestIdPolicy.on_request
   - azure.core.pipeline.policies.RequestIdPolicy.set_request_id
   class: azure.core.pipeline.policies.RequestIdPolicy
+  example:
+  - "Configuring a request id policy.<!--[!code-python[Main](les\\test_example_sansio.py\
+    \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
+    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\1\\\\s\\\\dist_temp\\\
+    \\0\\\\azure-core-1.4.0\\\\samples\\\\test_example_sansio.py\", \"xml:space\"\
+    : \"preserve\", \"language\": \"python\", \"linenos\": false, \"highlight_args\"\
+    : {\"linenostart\": 1}} -->\n\n````python\n\n   from azure.core.pipeline.policies\
+    \ import HeadersPolicy\n\n   request_id_policy = RequestIdPolicy()\n   request_id_policy.set_request_id('azconfig-test')\n\
+    \n   # Or headers can be added per operation. These headers will supplement existing\
+    \ headers\n   # or those defined in the config headers policy. They will also\
+    \ overwrite existing\n   # identical headers.\n   policies.append(request_id_policy)\n\
+    \   client = PipelineClient(base_url=url, policies=policies)\n   request = client.get(url)\n\
+    \   pipeline_response = client._pipeline.run(request, request_id=\"azconfig-test\"\
+    )\n\n   ````\n"
   fullName: azure.core.pipeline.policies.RequestIdPolicy
   inheritance:
   - inheritance:

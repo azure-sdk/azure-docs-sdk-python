@@ -4,6 +4,20 @@ items:
 - children:
   - azure.core.pipeline.AsyncPipeline.run
   class: azure.core.pipeline.AsyncPipeline
+  example:
+  - "Builds the async pipeline for asynchronous transport.<!--[!code-python[Main](les\\\
+    test_example_async.py )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [],\
+    \ \"names\": [], \"dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\\
+    1\\\\s\\\\dist_temp\\\\0\\\\azure-core-1.4.0\\\\samples\\\\test_example_async.py\"\
+    , \"xml:space\": \"preserve\", \"language\": \"python\", \"linenos\": false, \"\
+    highlight_args\": {\"linenostart\": 1}} -->\n\n````python\n\n   from azure.core.pipeline\
+    \ import AsyncPipeline\n   from azure.core.pipeline.policies import AsyncRedirectPolicy,\
+    \ UserAgentPolicy\n   from azure.core.pipeline.transport import AioHttpTransport,\
+    \ HttpRequest\n\n   # example: create request and policies\n   request = HttpRequest(\"\
+    GET\", \"https://bing.com\")\n   policies = [\n       UserAgentPolicy(\"myuseragent\"\
+    ),\n       AsyncRedirectPolicy()\n   ]\n\n   # run the pipeline\n   async with\
+    \ AsyncPipeline(transport=AioHttpTransport(), policies=policies) as pipeline:\n\
+    \       response = await pipeline.run(request)\n\n   ````\n"
   fullName: azure.core.pipeline.AsyncPipeline
   inheritance:
   - inheritance:
