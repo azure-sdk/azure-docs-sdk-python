@@ -6,21 +6,6 @@ items:
   - azure.core.pipeline.policies.UserAgentPolicy.on_request
   - azure.core.pipeline.policies.UserAgentPolicy.user_agent
   class: azure.core.pipeline.policies.UserAgentPolicy
-  example:
-  - "Configuring a user agent policy.<!--[!code-python[Main](les\\test_example_sansio.py\
-    \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
-    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\1\\\\s\\\\dist_temp\\\
-    \\0\\\\azure-core-1.4.0\\\\samples\\\\test_example_sansio.py\", \"xml:space\"\
-    : \"preserve\", \"language\": \"python\", \"linenos\": false, \"highlight_args\"\
-    : {\"linenostart\": 1}} -->\n\n````python\n\n   from azure.core.pipeline.policies\
-    \ import UserAgentPolicy\n\n   user_agent_policy = UserAgentPolicy()\n\n   # The\
-    \ user-agent policy allows you to append a custom value to the header.\n   user_agent_policy.add_user_agent(\"\
-    CustomValue\")\n\n   # You can also pass in a custom value per operation to append\
-    \ to the end of the user-agent.\n   # This can be used together with the policy\
-    \ configuration to append multiple values.\n   policies=[\n       redirect_policy,\n\
-    \       user_agent_policy,\n   ]\n   client = PipelineClient(base_url=url, policies=policies)\n\
-    \   request = client.get(url)\n   pipeline_response = client._pipeline.run(request,\
-    \ user_agent=\"AnotherValue\")\n\n   ````\n"
   fullName: azure.core.pipeline.policies.UserAgentPolicy
   inheritance:
   - inheritance:
