@@ -8,12 +8,13 @@ items:
   - azure.eventhub.aio.EventHubConsumerClient.get_partition_ids
   - azure.eventhub.aio.EventHubConsumerClient.get_partition_properties
   - azure.eventhub.aio.EventHubConsumerClient.receive
+  - azure.eventhub.aio.EventHubConsumerClient.receive_batch
   class: azure.eventhub.aio.EventHubConsumerClient
   example:
   - "Create a new instance of the EventHubConsumerClient.<!--[!code-python[Main](les\\\
     async_samples\\sample_code_eventhub_async.py )]-->\n\n<!-- literal_block {\"ids\"\
     : [], \"classes\": [], \"names\": [], \"dupnames\": [], \"backrefs\": [], \"source\"\
-    : \"D:\\\\a\\\\1\\\\s\\\\source_code\\\\0\\\\azure-eventhub-5.0.1\\\\samples\\\
+    : \"D:\\\\a\\\\1\\\\s\\\\source_code\\\\0\\\\azure-eventhub-5.1.0b2\\\\samples\\\
     \\async_samples\\\\sample_code_eventhub_async.py\", \"xml:space\": \"preserve\"\
     , \"language\": \"python\", \"linenos\": false, \"highlight_args\": {\"linenostart\"\
     : 1}} -->\n\n````python\n\n   import os\n   from azure.eventhub.aio import EventHubConsumerClient,\
@@ -104,7 +105,7 @@ items:
   - "Close down the client.<!--[!code-python[Main](les\\async_samples\\sample_code_eventhub_async.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
     dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\1\\\\s\\\\source_code\\\
-    \\0\\\\azure-eventhub-5.0.1\\\\samples\\\\async_samples\\\\sample_code_eventhub_async.py\"\
+    \\0\\\\azure-eventhub-5.1.0b2\\\\samples\\\\async_samples\\\\sample_code_eventhub_async.py\"\
     , \"xml:space\": \"preserve\", \"language\": \"python\", \"linenos\": false, \"\
     highlight_args\": {\"linenostart\": 1}} -->\n\n````python\n\n   import os\n\n\
     \   event_hub_connection_str = os.environ['EVENT_HUB_CONN_STR']\n   eventhub_name\
@@ -141,7 +142,7 @@ items:
   - "Create a new instance of the EventHubConsumerClient from connection string.<!--[!code-python[Main](les\\\
     async_samples\\sample_code_eventhub_async.py )]-->\n\n<!-- literal_block {\"ids\"\
     : [], \"classes\": [], \"names\": [], \"dupnames\": [], \"backrefs\": [], \"source\"\
-    : \"D:\\\\a\\\\1\\\\s\\\\source_code\\\\0\\\\azure-eventhub-5.0.1\\\\samples\\\
+    : \"D:\\\\a\\\\1\\\\s\\\\source_code\\\\0\\\\azure-eventhub-5.1.0b2\\\\samples\\\
     \\async_samples\\\\sample_code_eventhub_async.py\", \"xml:space\": \"preserve\"\
     , \"language\": \"python\", \"linenos\": false, \"highlight_args\": {\"linenostart\"\
     : 1}} -->\n\n````python\n\n   import os\n   from azure.eventhub.aio import EventHubConsumerClient\n\
@@ -231,7 +232,7 @@ items:
   - "Receive events from the EventHub.<!--[!code-python[Main](les\\async_samples\\\
     sample_code_eventhub_async.py )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\"\
     : [], \"names\": [], \"dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\\
-    a\\\\1\\\\s\\\\source_code\\\\0\\\\azure-eventhub-5.0.1\\\\samples\\\\async_samples\\\
+    a\\\\1\\\\s\\\\source_code\\\\0\\\\azure-eventhub-5.1.0b2\\\\samples\\\\async_samples\\\
     \\sample_code_eventhub_async.py\", \"xml:space\": \"preserve\", \"language\":\
     \ \"python\", \"linenos\": false, \"highlight_args\": {\"linenostart\": 1}} -->\n\
     \n````python\n\n       logger = logging.getLogger(\"azure.eventhub\")\n\n    \
@@ -263,12 +264,62 @@ items:
         <xref:azure.eventhub.aio.PartitionContext>.'
       id: on_event
       type:
-      - Callable[azure.eventhub.aio.PartitionContext, azure.eventhub.EventData]
+      - Callable[azure.eventhub.aio.PartitionContext, Optional[azure.eventhub.EventData]]
     return:
       type:
       - None
   type: method
   uid: azure.eventhub.aio.EventHubConsumerClient.receive
+- class: azure.eventhub.aio.EventHubConsumerClient
+  example:
+  - "Receive events in batches from the EventHub.<!--[!code-python[Main](les\\async_samples\\\
+    sample_code_eventhub_async.py )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\"\
+    : [], \"names\": [], \"dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\\
+    a\\\\1\\\\s\\\\source_code\\\\0\\\\azure-eventhub-5.1.0b2\\\\samples\\\\async_samples\\\
+    \\sample_code_eventhub_async.py\", \"xml:space\": \"preserve\", \"language\":\
+    \ \"python\", \"linenos\": false, \"highlight_args\": {\"linenostart\": 1}} -->\n\
+    \n````python\n\n       logger = logging.getLogger(\"azure.eventhub\")\n\n    \
+    \   async def on_event_batch(partition_context, event_batch):\n           # Put\
+    \ your code here.\n           # If the operation is i/o intensive, async will\
+    \ have better performance.\n           logger.info(\n               \"{} events\
+    \ received from partition: {}\".format(len(event_batch), partition_context.partition_id)\n\
+    \           )\n\n       async with consumer:\n           await consumer.receive_batch(\n\
+    \               on_event_batch=on_event_batch,\n               starting_position=\"\
+    -1\",  # \"-1\" is from the beginning of the partition.\n           )\n\n   ````\n"
+  fullName: azure.eventhub.aio.EventHubConsumerClient.receive_batch
+  langs:
+  - python
+  module: azure.eventhub.aio
+  name: receive_batch
+  summary: Receive events from partition(s) in batches, with optional load-balancing
+    and checkpointing.
+  syntax:
+    parameters:
+    - description: 'The callback function for handling a batch of received events.
+        The callback takes two
+
+        parameters: *partition_context* which contains partition context and *event_batch*,
+        which is the received
+
+        events. The callback function should be defined like: *on_event_batch(partition_context,
+        event_batch)*.
+
+        *event_batch* could be an empty list if *max_wait_time* is not None nor 0
+        and no event is received
+
+        after *max_wait_time*.
+
+        For detailed partition context information, please refer to
+
+        <xref:azure.eventhub.aio.PartitionContext>.'
+      id: on_event_batch
+      type:
+      - Callable[azure.eventhub.aio.PartitionContext, List[azure.eventhub.EventData]]
+    return:
+      type:
+      - None
+  type: method
+  uid: azure.eventhub.aio.EventHubConsumerClient.receive_batch
 references:
 - fullName: azure.eventhub.aio.EventHubConsumerClient.close
   isExternal: false
@@ -300,6 +351,11 @@ references:
   name: receive
   parent: azure.eventhub.aio.EventHubConsumerClient
   uid: azure.eventhub.aio.EventHubConsumerClient.receive
+- fullName: azure.eventhub.aio.EventHubConsumerClient.receive_batch
+  isExternal: false
+  name: receive_batch
+  parent: azure.eventhub.aio.EventHubConsumerClient
+  uid: azure.eventhub.aio.EventHubConsumerClient.receive_batch
 - fullName: list[str]
   name: list[str]
   spec.python:
@@ -314,8 +370,8 @@ references:
   - fullName: ']'
     name: ']'
   uid: list[str]
-- fullName: Callable[azure.eventhub.aio.PartitionContext, azure.eventhub.EventData]
-  name: Callable[PartitionContext, EventData]
+- fullName: Callable[azure.eventhub.aio.PartitionContext, Optional[azure.eventhub.EventData]]
+  name: Callable[PartitionContext, Optional[EventData]]
   spec.python:
   - fullName: Callable
     name: Callable
@@ -327,9 +383,42 @@ references:
     uid: azure.eventhub.aio.PartitionContext
   - fullName: ', '
     name: ', '
+  - fullName: Optional
+    name: Optional
+    uid: Optional
+  - fullName: '['
+    name: '['
   - fullName: azure.eventhub.EventData
     name: EventData
     uid: azure.eventhub.EventData
   - fullName: ']'
     name: ']'
-  uid: Callable[azure.eventhub.aio.PartitionContext, azure.eventhub.EventData]
+  - fullName: ']'
+    name: ']'
+  uid: Callable[azure.eventhub.aio.PartitionContext, Optional[azure.eventhub.EventData]]
+- fullName: Callable[azure.eventhub.aio.PartitionContext, List[azure.eventhub.EventData]]
+  name: Callable[PartitionContext, List[EventData]]
+  spec.python:
+  - fullName: Callable
+    name: Callable
+    uid: Callable
+  - fullName: '['
+    name: '['
+  - fullName: azure.eventhub.aio.PartitionContext
+    name: PartitionContext
+    uid: azure.eventhub.aio.PartitionContext
+  - fullName: ', '
+    name: ', '
+  - fullName: List
+    name: List
+    uid: List
+  - fullName: '['
+    name: '['
+  - fullName: azure.eventhub.EventData
+    name: EventData
+    uid: azure.eventhub.EventData
+  - fullName: ']'
+    name: ']'
+  - fullName: ']'
+    name: ']'
+  uid: Callable[azure.eventhub.aio.PartitionContext, List[azure.eventhub.EventData]]
