@@ -41,12 +41,14 @@ items:
   - python
   module: azure.core.pipeline
   name: run(request, **kwargs)
+  namewithoutparameters: run
   summary: Runs the HTTP Request through the chained policies.
   syntax:
     content: run(request, **kwargs)
     parameters:
     - description: The HTTP request object.
       id: request
+      isRequired: true
       type:
       - azure.core.pipeline.transport.HttpRequest
     return:

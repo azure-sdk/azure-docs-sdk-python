@@ -54,6 +54,7 @@ items:
   module: azure.core.pipeline.transport
   name: 'send(request: azure.core.pipeline.transport._base.HttpRequest, **kwargs:
     typing.Any) -> azure.core.pipeline.transport._base_async.AsyncHttpResponse'
+  namewithoutparameters: send
   summary: Send the request using this HTTP sender.
   syntax:
     content: 'send(request: azure.core.pipeline.transport._base.HttpRequest, **kwargs:
@@ -61,6 +62,7 @@ items:
     parameters:
     - description: The HttpRequest
       id: request
+      isRequired: true
       type:
       - azure.core.pipeline.transport.HttpRequest
     return:
@@ -75,10 +77,12 @@ items:
   - python
   module: azure.core.pipeline.transport
   name: sleep(duration)
+  namewithoutparameters: sleep
   syntax:
     content: sleep(duration)
     parameters:
     - id: duration
+      isRequired: true
   type: method
   uid: azure.core.pipeline.transport.AsyncioRequestsTransport.sleep
 references:

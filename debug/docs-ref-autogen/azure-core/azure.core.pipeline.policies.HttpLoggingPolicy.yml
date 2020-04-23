@@ -29,6 +29,7 @@ items:
   - python
   module: azure.core.pipeline.policies
   name: on_request(request)
+  namewithoutparameters: on_request
   summary: 'Logs HTTP method, url and headers.
 
     :param request: The PipelineRequest object.
@@ -38,6 +39,7 @@ items:
     content: on_request(request)
     parameters:
     - id: request
+      isRequired: true
   type: method
   uid: azure.core.pipeline.policies.HttpLoggingPolicy.on_request
 - class: azure.core.pipeline.policies.HttpLoggingPolicy
@@ -46,11 +48,14 @@ items:
   - python
   module: azure.core.pipeline.policies
   name: on_response(request, response)
+  namewithoutparameters: on_response
   syntax:
     content: on_response(request, response)
     parameters:
     - id: request
+      isRequired: true
     - id: response
+      isRequired: true
   type: method
   uid: azure.core.pipeline.policies.HttpLoggingPolicy.on_response
 - class: azure.core.pipeline.policies.HttpLoggingPolicy
@@ -60,11 +65,11 @@ items:
   module: azure.core.pipeline.policies
   name: DEFAULT_HEADERS_WHITELIST
   syntax:
-    content: DEFAULT_HEADERS_WHITELIST = {'ETag', 'x-ms-return-client-request-id',
-      'If-Modified-Since', 'traceparent', 'Expires', 'User-Agent', 'Date', 'Retry-After',
-      'x-ms-client-request-id', 'If-None-Match', 'Cache-Control', 'Request-Id', 'If-Match',
-      'Last-Modified', 'Pragma', 'Connection', 'Accept', 'Content-Type', 'Server',
-      'Transfer-Encoding', 'Content-Length', 'If-Unmodified-Since'}
+    content: DEFAULT_HEADERS_WHITELIST = {'Accept', 'User-Agent', 'Transfer-Encoding',
+      'Cache-Control', 'Connection', 'Content-Length', 'ETag', 'x-ms-client-request-id',
+      'Content-Type', 'If-Match', 'Pragma', 'Expires', 'x-ms-return-client-request-id',
+      'Request-Id', 'traceparent', 'Last-Modified', 'If-None-Match', 'Retry-After',
+      'Server', 'If-Modified-Since', 'Date', 'If-Unmodified-Since'}
   type: attribute
   uid: azure.core.pipeline.policies.HttpLoggingPolicy.DEFAULT_HEADERS_WHITELIST
 - class: azure.core.pipeline.policies.HttpLoggingPolicy

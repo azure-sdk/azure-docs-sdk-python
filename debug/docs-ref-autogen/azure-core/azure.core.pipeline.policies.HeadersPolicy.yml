@@ -40,16 +40,19 @@ items:
   - python
   module: azure.core.pipeline.policies
   name: add_header(key, value)
+  namewithoutparameters: add_header
   summary: Add a header to the configuration to be applied to all requests.
   syntax:
     content: add_header(key, value)
     parameters:
     - description: The header.
       id: key
+      isRequired: true
       type:
       - str
     - description: The header's value.
       id: value
+      isRequired: true
       type:
       - str
   type: method
@@ -70,12 +73,14 @@ items:
   - python
   module: azure.core.pipeline.policies
   name: on_request(request)
+  namewithoutparameters: on_request
   summary: Updates with the given headers before sending the request to the next policy.
   syntax:
     content: on_request(request)
     parameters:
     - description: The PipelineRequest object
       id: request
+      isRequired: true
       type:
       - azure.core.pipeline.PipelineRequest
   type: method

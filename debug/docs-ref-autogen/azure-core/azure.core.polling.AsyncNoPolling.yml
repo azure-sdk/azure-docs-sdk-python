@@ -26,6 +26,7 @@ items:
   - python
   module: azure.core.polling
   name: run()
+  namewithoutparameters: run
   summary: 'Empty run, no polling.
 
     Just override initial run to add "async"'

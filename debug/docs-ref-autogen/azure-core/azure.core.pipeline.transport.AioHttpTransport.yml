@@ -46,6 +46,7 @@ items:
   - python
   module: azure.core.pipeline.transport
   name: close()
+  namewithoutparameters: close
   summary: Closes the connection.
   syntax:
     content: close()
@@ -58,6 +59,7 @@ items:
   - python
   module: azure.core.pipeline.transport
   name: open()
+  namewithoutparameters: open
   summary: Opens the connection.
   syntax:
     content: open()
@@ -72,6 +74,7 @@ items:
   name: 'send(request: azure.core.pipeline.transport._base.HttpRequest, **config:
     typing.Any) -> typing.Union[azure.core.pipeline.transport._base_async.AsyncHttpResponse,
     NoneType]'
+  namewithoutparameters: send
   summary: 'Send the request using this HTTP sender.
 
 
@@ -85,10 +88,12 @@ items:
     parameters:
     - description: The HttpRequest object
       id: request
+      isRequired: true
       type:
       - azure.core.pipeline.transport.HttpRequest
     - description: Any keyword arguments
       id: config
+      isRequired: true
     return:
       description: The AsyncHttpResponse
       type:

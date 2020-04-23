@@ -36,6 +36,7 @@ items:
   - python
   module: azure.core
   name: close()
+  namewithoutparameters: close
   syntax:
     content: close()
     parameters: []

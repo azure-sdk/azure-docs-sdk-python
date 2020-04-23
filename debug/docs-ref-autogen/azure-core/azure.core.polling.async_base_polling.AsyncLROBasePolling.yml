@@ -29,6 +29,7 @@ items:
   - python
   module: azure.core.polling.async_base_polling
   name: request_status(status_link)
+  namewithoutparameters: request_status
   summary: 'Do a simple GET to this status link.
 
 
@@ -37,6 +38,7 @@ items:
     content: request_status(status_link)
     parameters:
     - id: status_link
+      isRequired: true
     return:
       type:
       - azure.core.pipeline.PipelineResponse
@@ -48,6 +50,7 @@ items:
   - python
   module: azure.core.polling.async_base_polling
   name: run()
+  namewithoutparameters: run
   syntax:
     content: run()
     parameters: []
@@ -59,6 +62,7 @@ items:
   - python
   module: azure.core.polling.async_base_polling
   name: update_status()
+  namewithoutparameters: update_status
   summary: Update the current status of the LRO.
   syntax:
     content: update_status()

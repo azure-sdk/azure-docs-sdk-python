@@ -25,6 +25,7 @@ items:
   - python
   module: azure.core.polling
   name: finished()
+  namewithoutparameters: finished
   syntax:
     content: finished()
     parameters: []
@@ -36,12 +37,16 @@ items:
   - python
   module: azure.core.polling
   name: initialize(client, initial_response, deserialization_callback)
+  namewithoutparameters: initialize
   syntax:
     content: initialize(client, initial_response, deserialization_callback)
     parameters:
     - id: client
+      isRequired: true
     - id: initial_response
+      isRequired: true
     - id: deserialization_callback
+      isRequired: true
   type: method
   uid: azure.core.polling.AsyncPollingMethod.initialize
 - class: azure.core.polling.AsyncPollingMethod
@@ -50,6 +55,7 @@ items:
   - python
   module: azure.core.polling
   name: resource()
+  namewithoutparameters: resource
   syntax:
     content: resource()
     parameters: []
@@ -61,6 +67,7 @@ items:
   - python
   module: azure.core.polling
   name: run()
+  namewithoutparameters: run
   syntax:
     content: run()
     parameters: []
@@ -72,6 +79,7 @@ items:
   - python
   module: azure.core.polling
   name: status()
+  namewithoutparameters: status
   syntax:
     content: status()
     parameters: []

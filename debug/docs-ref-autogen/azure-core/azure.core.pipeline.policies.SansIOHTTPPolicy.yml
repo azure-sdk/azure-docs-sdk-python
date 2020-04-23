@@ -40,6 +40,7 @@ items:
   - python
   module: azure.core.pipeline.policies
   name: on_exception(request)
+  namewithoutparameters: on_exception
   summary: 'Is executed if an exception is raised while executing the next policy.
 
 
@@ -54,6 +55,7 @@ items:
     parameters:
     - description: The Pipeline request object
       id: request
+      isRequired: true
       type:
       - azure.core.pipeline.PipelineRequest
     return:
@@ -68,12 +70,14 @@ items:
   - python
   module: azure.core.pipeline.policies
   name: on_request(request)
+  namewithoutparameters: on_request
   summary: Is executed before sending the request from next policy.
   syntax:
     content: on_request(request)
     parameters:
     - description: Request to be modified before sent from next policy.
       id: request
+      isRequired: true
       type:
       - azure.core.pipeline.PipelineRequest
   type: method
@@ -84,16 +88,19 @@ items:
   - python
   module: azure.core.pipeline.policies
   name: on_response(request, response)
+  namewithoutparameters: on_response
   summary: Is executed after the request comes back from the policy.
   syntax:
     content: on_response(request, response)
     parameters:
     - description: Request to be modified after returning from the policy.
       id: request
+      isRequired: true
       type:
       - azure.core.pipeline.PipelineRequest
     - description: Pipeline response object
       id: response
+      isRequired: true
       type:
       - azure.core.pipeline.PipelineResponse
   type: method

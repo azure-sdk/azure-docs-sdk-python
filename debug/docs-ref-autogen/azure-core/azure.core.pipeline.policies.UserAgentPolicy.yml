@@ -33,6 +33,7 @@ items:
   - python
   module: azure.core.pipeline.policies
   name: add_user_agent(value)
+  namewithoutparameters: add_user_agent
   summary: 'Add value to current user agent with a space.
 
     :param str value: value to add to user agent.'
@@ -40,6 +41,7 @@ items:
     content: add_user_agent(value)
     parameters:
     - id: value
+      isRequired: true
   type: method
   uid: azure.core.pipeline.policies.UserAgentPolicy.add_user_agent
 - class: azure.core.pipeline.policies.UserAgentPolicy
@@ -48,12 +50,14 @@ items:
   - python
   module: azure.core.pipeline.policies
   name: on_request(request)
+  namewithoutparameters: on_request
   summary: Modifies the User-Agent header before the request is sent.
   syntax:
     content: on_request(request)
     parameters:
     - description: The PipelineRequest object
       id: request
+      isRequired: true
       type:
       - azure.core.pipeline.PipelineRequest
   type: method

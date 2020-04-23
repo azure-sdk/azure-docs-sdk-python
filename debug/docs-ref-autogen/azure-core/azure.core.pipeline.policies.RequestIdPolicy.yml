@@ -35,6 +35,7 @@ items:
   - python
   module: azure.core.pipeline.policies
   name: on_request(request)
+  namewithoutparameters: on_request
   summary: Updates with the given request id before sending the request to the next
     policy.
   syntax:
@@ -42,6 +43,7 @@ items:
     parameters:
     - description: The PipelineRequest object
       id: request
+      isRequired: true
       type:
       - azure.core.pipeline.PipelineRequest
   type: method
@@ -52,12 +54,14 @@ items:
   - python
   module: azure.core.pipeline.policies
   name: set_request_id(value)
+  namewithoutparameters: set_request_id
   summary: Add the request id to the configuration to be applied to all requests.
   syntax:
     content: set_request_id(value)
     parameters:
     - description: The request id value.
       id: value
+      isRequired: true
       type:
       - str
   type: method
