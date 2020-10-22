@@ -1834,6 +1834,19 @@
         "sample*",
         "doc*"
       ]
+    },
+    {
+      "excludePath": [
+        "test*",
+        "example*",
+        "sample*",
+        "doc*"
+      ],
+      "package_info": {
+        "name": "azure-digitaltwins-nspkg",
+        "prefer_source_distribution": "true",
+        "install_type": "pypi"
+      }
     }
   ],
   "required_packages": [
